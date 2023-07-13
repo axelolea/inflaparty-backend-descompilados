@@ -6,7 +6,6 @@ import com.decodificados.inflaparty.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +22,6 @@ public class ProductController {
 
     @PostMapping
     public Product createProduct(@RequestBody Product product){
-        System.out.println(product);
         return productService.createProduct(product);
     }
 
@@ -41,6 +39,5 @@ public class ProductController {
     public Product deleteProduct(@PathVariable Long id){
         return productService.deleteProduct(id);
     }
-
 
 }
